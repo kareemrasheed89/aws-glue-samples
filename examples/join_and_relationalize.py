@@ -50,6 +50,8 @@ l_history.toDF().write.parquet(output_lg_partitioned_dir, partitionBy=['org_name
 
 # ---- Write out to relational databases ----
 
+# -----Relational database makes it easier to query with simple SQL language
+
 # Convert the data to flat tables
 print("Converting to flat tables ...")
 dfc = l_history.relationalize("hist_root", redshift_temp_dir)
